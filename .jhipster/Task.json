@@ -1,0 +1,39 @@
+{
+    "name": "Task",
+    "fields": [
+        {
+            "fieldName": "taskMode",
+            "fieldType": "TaskMode",
+            "fieldValues": "NO_CONTINUE_STAGE_COUNT,STAGE_COUNT,STAGE_ID",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "value",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "task",
+            "otherEntityRelationshipName": "task",
+            "relationshipName": "parent",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191007122147",
+    "entityTableName": "task",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "jhipsterSampleApplication",
+    "applications": "*",
+    "microserviceName": "jhipsterSampleApplication"
+}
